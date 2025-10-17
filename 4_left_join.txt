@@ -1,0 +1,3 @@
+rows_big_left дорівнює кількості рядків у order_details (або базовому rows_big, якщо не було "сиріт").
+
+Якщо в order_details є product_id, якому не відповідає жоден запис у products, то з INNER JOIN такі рядки зникли, а з LEFT JOIN — залишаться (з product_* = NULL). Отже, rows_big_left може бути більше, ніж rows_big
